@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_12_03_175043) do
 
   create_table "burritos", force: :cascade do |t|
@@ -28,11 +27,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_175043) do
     t.integer "transaction_id"
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.integer "customer_id"
-    t.integer "store_id"
-  end
-
   create_table "stores", force: :cascade do |t|
     t.string "address"
     t.string "city"
@@ -42,13 +36,17 @@ ActiveRecord::Schema.define(version: 2019_12_03_175043) do
     t.string "phone_number"
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "store_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.integer "favorite_order_id"
     t.string "username"
     t.string "password"
-
   end
 
 end
