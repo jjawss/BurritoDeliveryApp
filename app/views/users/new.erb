@@ -1,3 +1,28 @@
 <h1> Sign Up! </h1> 
-<%=%>
+<%= form_with({model: user}) do |form|%>
 
+
+<label> Name </label>
+<%=form.text_field(:name)%>
+
+
+<label> Address </label>
+<%=form.text_field(:address)%>
+
+
+
+<label> UserName </label>
+<%=form.text_field(:username)%>
+
+
+
+<label>  Password  </label>
+<%=form.text_field(:password)%>
+
+<%= form.submit("Create Account")%>
+
+
+
+
+
+<%end%>
