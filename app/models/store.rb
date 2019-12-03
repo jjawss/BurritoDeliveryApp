@@ -1,4 +1,4 @@
 class Store < ApplicationRecord
   has_many :transactions
-  has_many :Users, through :transactions
+  has_many :users, through :transactions
 end

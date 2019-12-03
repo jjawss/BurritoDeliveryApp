@@ -1,5 +1,7 @@
 class Transaction < ApplicationRecord
-  has_many :users
-  has_many :stores
-  belongs_to :burrito
+  
+  belongs_to :user
+  belong_to :store
+  has_many :burritos
+
 end
