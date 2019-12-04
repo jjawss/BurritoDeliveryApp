@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_220844) do
+ActiveRecord::Schema.define(version: 2019_12_03_234746) do
 
   create_table "burritos", force: :cascade do |t|
     t.string "type"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 2019_12_03_220844) do
     t.boolean "cheese"
     t.string "price"
     t.integer "transaction_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "store_id"
+    t.float "total_price"
   end
 
   create_table "stores", force: :cascade do |t|
