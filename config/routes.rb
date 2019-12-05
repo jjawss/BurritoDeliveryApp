@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :users
-  
+  get('/users/login', to: 'users#login')
+  post('/users/login', to: 'users#auth')
+  get('/users/my_profile', to: 'users#my_profile')
+  get('/users/logout', to: 'users#logout')
+  resources :users, except: :show
+
+
+
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

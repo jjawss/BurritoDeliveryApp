@@ -1,0 +1,17 @@
+
+<h1>Login Here!</h1>
+
+
+<%= form_with({ url: '/users/login', method: 'post'}) do | form | %>
+
+   <label> Username </label>
+   <%= form.text_field(:username) %>
+    <br>
+
+    <label> Password </label>
+    <%= form.password_field(:password) %>
+    <br>
+    
+    <%= form.submit("login") %>
+
+<% end %>

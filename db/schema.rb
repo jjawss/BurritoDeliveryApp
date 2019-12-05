@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_234746) do
     t.string "address"
     t.integer "favorite_order_id"
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end

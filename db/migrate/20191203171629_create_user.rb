@@ -5,7 +5,7 @@ class CreateUser < ActiveRecord::Migration[6.0]
       table.string :address
       table.integer :favorite_order_id
       table.string :username
-      table.string :password
+      table.string :password_digest
 
 
     end
