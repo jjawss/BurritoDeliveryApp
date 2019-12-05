@@ -3,10 +3,7 @@ class BurritosController < ApplicationController
     @burritos = Burrito.all
   end
 
-  def new
-  end
-  
-  def create
+    def create
     Burrito.create({
       style: params[:style],
       rice: params[:rice],
@@ -22,12 +19,16 @@ class BurritosController < ApplicationController
     redirect_to action:'index'
   end
 
-  def edit
-    @burrito = Burrito.find_by({:id params[:id]})
+  def new
+    @stores = Store.all
+  end
+
+  def show
   end
 
   def update
-    @burrito = Burrito.find_by({:id params[:id]})
+    Store.find_by(id: Store.id)
+    @burrito = Burrito.find_by({id: params[:id]})
     @burrito.update({
       style: params[:style],
       rice: params[:rice],
@@ -40,5 +41,12 @@ class BurritosController < ApplicationController
       lettuce: params[:lettuce],
       cheese: params[:cheese]
     })
+    redirect_to action:'index'
   end
+
+  def edit
+    @burrito = Burrito.find_by({id: params[:id]})
+  end
+
+
 end

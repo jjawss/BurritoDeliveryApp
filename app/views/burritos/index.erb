@@ -1,4 +1,14 @@
 <h1>All Burritos</h1>
 <%@burritos.each do |burrito| %>
+  <div>
+  <%=burrito.id%>
   <%=burrito.style%>
-<%end%>>
+  <label>price:<label>
+  <%=burrito.price%>
+  <label>salsa:<label>
+  <%=burrito.salsa%>
+  <p>Sourcream: <%=burrito.sour_cream%></p>
+  <a href="/burritos/<%=burrito.id%>/edit">edit</a>
+  </div>
+  <br>
+<%end%>

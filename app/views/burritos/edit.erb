@@ -1,78 +1,116 @@
-<h1> Order Form </h1>
+<h1> Edit Order </h1>
 
-<form method="POST" action="/burritos/params[:id]">
+<form method="POST" action="/burritos/<%=@burrito.id%>">
   <input type="hidden" name="_method" value="patch">
+  
+  <div>
+    <label name="store">Location</label>
+    <select>
+      <%@stores.each do |store|%>
+        <option><%=store.address%></option>
+      <%end%>
+    </select>
+  </div>
+  
   <div>
     <label>Burrito</label>
-    <input type="radio" name="style" value="burrito">
+    <input 
+      type="radio" 
+      name="style" 
+      value= "burrito" 
+      <%=@burrito.style == "burrito" ? "checked" : ""%>>
     <label>Bowl</label>
-    <input type="radio" name="style" value="bowl">
+    <input 
+      type="radio" 
+      name="style" 
+      value="bowl"
+      <%=@burrito.style == "bowl" ? "checked" : ""%>>
   </div>
 
   <div>
     <label>Cilantro Lime Rice</label>
-    <input type="radio" name="rice" value="cilantro_lime_rice">
+    <input 
+      type="radio" 
+      name="rice" 
+      value= "cilantro_lime_rice" 
+      <%=@burrito.rice=="cilantro_lime_rice" ? "checked" : ""%>>
     <label>Brown Rice</label>
-    <input type="radio" name="rice" value="brown rice">
+    <input 
+      type="radio" 
+      name="rice" 
+      value= "brown rice"
+      <%=@burrito.rice=="brown rice" ? "checked" : ""%>>
     <label>None</label>
-    <input type="radio" name="rice" value="none">
+    <input 
+      type="radio" 
+      name="rice" 
+      value= "none"
+      <%=@burrito.rice=="none" ? "checked" : ""%>>
   </div>
 
   <div>
     <label>Black Beans</label>
-    <input type="radio" name="beans" value="black beans">
+    <input type="radio" 
+      name="beans" 
+      value="black beans"
+      <%=@burrito.beans=="black beans" ? "checked" : ""%>>
     <label>Pinto Beans</label>
-    <input type="radio" name="beans" value="pinto beans">
+    <input 
+      type="radio" 
+      name="beans" 
+      value="pinto beans"
+      <%=@burrito.beans=="pinto beans" ? "checked" : ""%>>
     <label>None</label>
-    <input type="radio" name="beans" value="none">
+    <input 
+      type="radio" 
+      name="beans" 
+      value="none"
+      <%=@burrito.beans=="none" ? "checked" : ""%>>
   </div>
 
   <div>
     <label>protein</label>
     <select name="meat">
-      <%@burritos.each do |burrito|
-        if burrito.meat == 
-      %>
-      <option value="chicken">chicken</option>
-      <option value="steak">steak</option>
-      <option value="carnitas">carnitas</option>
-      <option value="barbacoa">barbacoa</option>
-      <option value="vegetarian">vegetarian</option>
+      <option value="chicken" <%=@burrito.meat == "chicken" ? "selected" : "" %> >chicken</option>
+      <option value="steak" <%=@burrito.meat == "steak" ? "selected" : "" %>>steak</option>
+      <option value="carnitas" <%=@burrito.meat == "carnitas" ? "selected" : "" %>>carnitas</option>
+      <option value="barbacoa" <%=@burrito.meat == "barbacoa" ? "selected" : "" %>>barbacoa</option>
+      <option value="vegetarian" <%=@burrito.meat == "vegetarian" ? "selected" : "" %>>vegetarian</option>
     </select>
   </div>
 
   <div>
     <label>peppers & onions</label>
-    <input type="checkbox" name="veggies">
+    <input type="checkbox" name="veggies" <%=@burrito.veggies== true ? "checked" : ""%>>
   </div>
 
   <div>
     <label>salsa</label>
     <select name="salsa">
-      <option>mild</option>
-      <option>medium</option>
-      <option>hot</option>
+      <option value="mild" <%=@burrito.salsa == "mild" ? "selected" : "" %>>mild</option>
+      <option value="medium" <%=@burrito.salsa == "medium" ? "selected" : "" %>>medium</option>
+      <option value="hot" <%=@burrito.salsa == "hot" ? "selected" : "" %>>hot</option>
     </select> 
   </div>
 
   <div>
     <label>sour cream</label>
-      <input type="checkbox" value="salsa" name="sour_cream">
+    <input type="checkbox" name="sour_cream" <%=@burrito.sour_cream== true ? "checked" : ""%>>
   </div>
 
   <div>
     <label>corn</label>
-    <input type="checkbox" value="corn" name="corn">
+    <input type="checkbox" name="corn" <%=@burrito.corn== true ? "checked" : ""%>>
   </div>
 
   <div>
     <label>lettuce</label>
-    <input type="checkbox" value="lettuce" name="lettuce">
+    <input type="checkbox" name="lettuce" <%=@burrito.lettuce== true ? "checked" : ""%>>
   </div>
 
   <div>
     <label>cheese</label>
-    <input type="checkbox" value="cheese" name="cheese">
+    <input type="checkbox" name="cheese" <%=@burrito.cheese== true ? "checked" : ""%>>
   </div>
-  <input type="submit" value="submit order">
+  <input type="submit" value="re-submit order">
 </form>
