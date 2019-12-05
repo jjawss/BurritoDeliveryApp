@@ -1,0 +1,74 @@
+<h1> Order Form <h2>
+
+<form method="POST" action="/burritos">
+  <div>
+    <label>Burrito</label>
+    <input type="radio" name="style" value="burrito">
+    <label>Bowl</label>
+    <input type="radio" name="style" value="bowl">
+  </div>
+
+  <div>
+    <label>Cilantro Lime Rice</label>
+    <input type="radio" name="rice" value="cilantro_lime_rice">
+    <label>Brown Rice</label>
+    <input type="radio" name="rice" value="brown rice">
+    <label>None</label>
+    <input type="radio" name="rice" value="none">
+  </div>
+
+  <div>
+    <label>Black Beans</label>
+    <input type="radio" name="beans" value="black beans">
+    <label>Pinto Beans</label>
+    <input type="radio" name="beans" value="pinto beans">
+    <label>None</label>
+    <input type="radio" name="beans" value="none">
+  </div>
+
+  <div>
+    <label>protein</label>
+    <select name="meat">
+      <option value="chicken">chicken</option>
+      <option value="steak">steak</option>
+      <option value="carnitas">carnitas</option>
+      <option value="barbacoa">barbacoa</option>
+      <option value="vegetarian">vegetarian</option>
+    </select>
+  </div>
+
+  <div>
+    <label>peppers & onions</label>
+    <input type="checkbox" name="veggies">
+  </div>
+
+  <div>
+    <label>salsa</label>
+    <select name="salsa">
+      <option>mild</option>
+      <option>medium</option>
+      <option>hot</option>
+    </select> 
+  </div>
+
+  <div>
+    <label>sour cream</label>
+      <input type="checkbox" value="salsa" name="sour_cream">
+  </div>
+
+  <div>
+    <label>corn</label>
+    <input type="checkbox" value="corn" name="corn">
+  </div>
+
+  <div>
+    <label>lettuce</label>
+    <input type="checkbox" value="lettuce" name="lettuce">
+  </div>
+
+  <div>
+    <label>cheese</label>
+    <input type="checkbox" value="cheese" name="cheese">
+  </div>
+  <input type="submit" value="submit order">
+</form>

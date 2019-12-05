@@ -1,7 +1,7 @@
-class CreateBurrito < ActiveRecord::Migration[6.0]
+class CreateBurritos < ActiveRecord::Migration[6.0]
   def change
     create_table :burritos do |t|
-      t.string :type
+      t.string :style
       t.string :rice
       t.string :beans
       t.string :meat
