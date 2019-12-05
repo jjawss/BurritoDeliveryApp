@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   
-  resources :users
+  get('/users/login', to: 'users#login')
+  post('/users/login', to: 'users#auth')
+  get('/users/my_profile', to: 'users#my_profile')
+  get('/users/logout', to: 'users#logout')
+  get('/homepages', to: 'homepages#home')
+  resources :users, except: :show
+
+
+
+
+
   resources :burritos
   resources :orders
   resources :stores

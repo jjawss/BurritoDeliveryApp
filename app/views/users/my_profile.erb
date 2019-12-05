@@ -1,0 +1,99 @@
+
+        <style>
+
+
+
+.font1 {
+    font-family:'Roboto',sans-serif;
+}
+
+
+
+
+.button1 {
+  background-color: #00BFFF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;  
+  border-radius:2em;
+  box-sizing: border-box;
+  font-family:'Roboto',sans-serif;
+}
+
+.button2 {
+  background-color: #00FF7F;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;  
+  border-radius:2em;
+  box-sizing: border-box;
+
+}
+
+
+
+ 
+ .paddingtop {
+            padding-top: 25px
+        }
+
+   .paddingtop2 {
+            padding-top: 50px
+        }     
+
+
+</style>
+
+
+
+
+
+<h1 class= "font1">Here is your profile</h1>
+
+<div class= "paddingtop">
+<h2 class = "font1" ><%=@user.username%></h2>
+</div>
+
+<br>
+
+<div  class= "paddingtop">
+<h2 class = "font1"   ><%=@user.name%></h2>
+</div>
+
+<br>
+
+<div class= "paddingtop">
+<h2   class = "font1"    ><%=@user.address%></h2>
+</div>
+
+<br>
+
+<div class= "paddingtop">
+<a class="button1" href="/burritos/new" >Order Here!</a>
+</div>
+
+
+
+
+
+<div class="paddingtop2">
+<form method="get" action="/users/logout">
+
+    <button class="button2" type="submit">Logout</button>
+
+</form>
+
+</div>
+

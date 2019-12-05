@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Use faker to generate seeds data
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'bcrypt', '~> 3.1.7'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
