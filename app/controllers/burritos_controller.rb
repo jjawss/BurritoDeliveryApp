@@ -23,11 +23,11 @@ class BurritosController < ApplicationController
   end
 
   def edit
-    @burrito = Burrito.find_by({:id params[:id]})
+    @burrito = Burrito.find_by({id: params[:id]})
   end
 
   def update
-    @burrito = Burrito.find_by({:id params[:id]})
+    @burrito = Burrito.find_by({id: params[:id]})
     @burrito.update({
       style: params[:style],
       rice: params[:rice],

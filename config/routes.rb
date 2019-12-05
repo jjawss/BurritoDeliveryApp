@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post('/users/login', to: 'users#auth')
   get('/users/my_profile', to: 'users#my_profile')
   get('/users/logout', to: 'users#logout')
+  get('/homepages', to: 'homepages#home')
   resources :users, except: :show
 
 
