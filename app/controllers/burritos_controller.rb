@@ -4,7 +4,7 @@ class BurritosController < ApplicationController
   end
 
     def create
-      Order.find_by({customer_id: params[:orders_id]})
+      Order.find_by({user_id: params[:orders_id]})
       Burrito.create({
         style: params[:style],
         rice: params[:rice],
@@ -33,7 +33,7 @@ class BurritosController < ApplicationController
   end
 
   def update
-    Store.find_by(id: params[store_id])
+    Store.find_by(id: params[:store_id])
     @burrito = Burrito.find_by({id: params[:id]})
     @burrito.update({
       style: params[:style],

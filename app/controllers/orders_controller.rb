@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
   def create
     order = Order.new(
-      user_id: session[:user_id], #???
+      user_id: session[:user_id],
       store_id: params[:store_id]
     )
     order.save
