@@ -1,0 +1,15 @@
+<h1>Stores</h1>
+<%@stores.each do |store|%>
+  <div>
+    <%=store.address%>
+    <%=store.city%>
+    <%=store.state%>
+    <%=store.zip_code%>
+    <%=store.hours_open%>
+    <%=store.phone_number%>
+    <form method="POST" action="/orders">
+      <input type="hidden" name="store_id" value=<%=store.id%>>
+      <input value="select store" type="submit">
+    </form>
+  </div>
+<%end%>

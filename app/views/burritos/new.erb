@@ -2,15 +2,6 @@
 
 <form method="POST" action="/burritos">
   <div>
-    <label name="store">Location</label>
-    <select>
-      <%@stores.each do |store|%>
-        <option><%=store.address%></option>
-      <%end%>
-    </select>
-  </div>
-
-  <div>
     <label>Burrito</label>
     <input type="radio" name="style" value="burrito">
     <label>Bowl</label>
@@ -79,5 +70,6 @@
     <label>cheese</label>
     <input type="checkbox" value="cheese" name="cheese">
   </div>
-  <input type="submit" value="submit order">
+
+  <input type="submit" name="cart" value="cart">
 </form>

@@ -5,13 +5,11 @@ Rails.application.routes.draw do
   get('/users/my_profile', to: 'users#my_profile')
   get('/users/logout', to: 'users#logout')
   get('/homepages', to: 'homepages#home')
-  resources :users, except: :show
-
-
-
-
-
-  resources :burritos
+  
+  get('/burritos/new/:orders_id', to: 'burritos#new')
+  
+  resources :users, except: [:show]
+  resources :burritos, except:[ :new, :show]
   resources :orders
   resources :stores
   

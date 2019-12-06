@@ -12,7 +12,7 @@ class CreateBurritos < ActiveRecord::Migration[6.0]
       t.boolean :lettuce
       t.boolean :cheese
       t.string :price
-      t.integer :transaction_id
+      t.integer :orders_id
     end
   end
 end

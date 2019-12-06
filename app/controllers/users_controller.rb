@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-
-
-
 def my_profile
     @user = User.find(session[:user_id])
 end
