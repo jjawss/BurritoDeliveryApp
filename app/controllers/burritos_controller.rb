@@ -4,7 +4,7 @@ class BurritosController < ApplicationController
   end
 
     def create
-      Order.find_by({customer_id: params[:orders_id]})
+      Order.find_by({user_id: params[:orders_id]})
       Burrito.create({
         style: params[:style],
         rice: params[:rice],
@@ -17,7 +17,7 @@ class BurritosController < ApplicationController
         lettuce: params[:lettuce],
         cheese: params[:cheese]
       })
-      redirect_to action:'index'
+      redirect_to '/carts/my_cart'
       # if params[:next_action] == "Cart"
       #   redirect_to '/orders/params[:id]' #how do I get to a specific transaction id from here??
       # elsif( params[:next_action] == "+ Burrito" )
@@ -33,7 +33,7 @@ class BurritosController < ApplicationController
   end
 
   def update
-    Store.find_by(id: params[store_id])
+    Store.find_by(id: params[:store_id])
     @burrito = Burrito.find_by({id: params[:id]})
     @burrito.update({
       style: params[:style],
@@ -47,7 +47,7 @@ class BurritosController < ApplicationController
       lettuce: params[:lettuce],
       cheese: params[:cheese]
     })
-    redirect_to action:'index'
+    redirect_to "/carts/my_cart"
   end
 
   def edit

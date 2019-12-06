@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get('/homepages', to: 'homepages#home')
   
   get('/burritos/new/:orders_id', to: 'burritos#new')
+  get('carts/my_cart', to: 'carts#my_cart')
   
   resources :users, except: [:show]
   resources :burritos, except:[:new, :show]

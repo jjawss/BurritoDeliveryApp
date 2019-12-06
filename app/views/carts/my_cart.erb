@@ -1,0 +1,70 @@
+<h1>Your Cart</h1>
+
+<%@burritos.each do |burrito|%>
+    
+    <h2> Your Item</h2>
+    <h3><label>Style</label></h3>
+     <%=burrito.style%>
+    
+
+    <br>
+    
+   <h3><label>Rice</label></h3>
+    <%=burrito.rice%>
+
+
+    <br>
+   
+   <h3><label>Beans</label></h3>
+    <%=burrito.beans%>
+    
+
+  
+    <h3><label>Meat</label></h3>
+    <%=burrito.meat%>
+    
+
+     <br>
+
+    <h3><label>Veggies</label></h3>
+    <%=burrito.veggies%>
+    
+
+
+
+    <h3><label>Salsa</label></h3>
+    <%=burrito.salsa%>
+    
+
+     <br>
+    
+    <h3><label>Sour Cream</label></h3>
+    <%=burrito.sour_cream%>
+    
+
+     <br>
+    
+    <h3><label>Corn</label></h3>
+    <%=burrito.corn%>
+    
+
+     <br>
+    
+    
+    <h3><label>Lettuce</label></h3>
+    <%=burrito.lettuce%>
+     
+
+     <br>
+    
+    <h3><label>Cheese</label></h3>
+    <%=burrito.cheese%>
+    
+    <a href="/burritos/<%=burrito.id%>/edit">edit</a>
+
+
+
+
+    
+  
+<%end%>
