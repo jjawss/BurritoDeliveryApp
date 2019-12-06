@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 2019_12_06_133348) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "customer_id"
+    t.integer "user_id"
     t.integer "store_id"
     t.float "total_price"
-    t.boolean "order_submitted"
+    t.boolean "order_submitted", default: false
   end
 
   create_table "stores", force: :cascade do |t|

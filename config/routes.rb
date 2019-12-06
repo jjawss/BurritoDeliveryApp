@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get('/burritos/new/:orders_id', to: 'burritos#new')
   
   resources :users, except: [:show]
-  resources :burritos, except:[ :new, :show]
+  resources :burritos, except:[:new, :show]
   resources :orders
   resources :stores
   
