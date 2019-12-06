@@ -26,14 +26,14 @@ class BurritosController < ApplicationController
   end
 
   def new
-    @stores = Store.all
+    #@stores = Store.all
   end
 
   def show
   end
 
   def update
-    Store.find_by(id: Store.id)
+    Store.find_by(id: params[store_id])
     @burrito = Burrito.find_by({id: params[:id]})
     @burrito.update({
       style: params[:style],
