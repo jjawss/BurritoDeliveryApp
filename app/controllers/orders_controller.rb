@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   def index
 
-    redirect_to '/burritos/new'
   end
 
   def show
